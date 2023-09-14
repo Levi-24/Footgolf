@@ -46,7 +46,7 @@ namespace CA230914_01
             Console.WriteLine("8.Feladat: ");
             var egyesuletek = versenyzok
                 .GroupBy(v => v.Egyesulet)
-                .Where(x => x.Count() < 3 && x.Key is not null);
+                .Where(x => x.Count() > 3 && x.Key is not null);
 
             foreach (var kvp in egyesuletek)
             {
